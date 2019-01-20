@@ -26,13 +26,7 @@ You must install Elasticsearch and Kibana version 6.0.0 or abover properly. Usin
 2. Go to the output plugin configuration and make sure the hosts setting of elasticsearch output is properly set.
 
 ### Run
-
-Type in the below command to run dump1090-faand logstash.
-
-```
-$ dump1090-fa--net --aggressive --quiet &
-$ logstash -f flight-track-logstash.conf
-```
+After installing dump1090-fa, the /should/ be a service running called "dump1090-fa."  If not, please valdiate your install.
 
 ### Import Kibana Visuals and Dashboard
 
