@@ -1,7 +1,8 @@
-# Flight Track - ADS-B Signal Visualization with Elastic Stack
-# Now with (ghetto) dump1090-fa support!
+# Flight Track - ADS-B Signal Visualization with Elastic Stack   
 
 ![](https://raw.githubusercontent.com/kosho/flight-track/master/flight-track-screenshot.png)
+## Notes
+This is a total hack to get dump1090-fa working. YMMV
 
 ## Prerequirements
 
