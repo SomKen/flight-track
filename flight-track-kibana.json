@@ -1,219 +1,192 @@
-{
-  "version": "6.0.0",
-  "objects": [
-    {
-      "id": "9f5af290-d3f7-11e7-8269-95ce1876e83b",
-      "type": "visualization",
-      "version": 3,
-      "attributes": {
-        "title": "Flight Track - Bar Unique Airplanes",
-        "visState": "{\"title\":\"Flight Track - Bar Unique Airplanes\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Unique count of flight\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Unique count of flight\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"flight\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"airline\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
-        "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-        }
-      }
-    },
-    {
-      "id": "46ad9d30-d3f9-11e7-8269-95ce1876e83b",
-      "type": "visualization",
+[
+  {
+    "_id": "7abe9ec0-d404-11e7-8269-95ce1876e83b",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Flight Track - Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":10,\"i\":\"1\",\"w\":16,\"x\":0,\"y\":30},\"id\":\"9f5af290-d3f7-11e7-8269-95ce1876e83b\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"gridData\":{\"h\":10,\"i\":\"2\",\"w\":8,\"x\":16,\"y\":0},\"id\":\"46ad9d30-d3f9-11e7-8269-95ce1876e83b\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"gridData\":{\"h\":10,\"i\":\"3\",\"w\":8,\"x\":24,\"y\":0},\"id\":\"38e09810-d3f9-11e7-8269-95ce1876e83b\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{\"mapCenter\":[47.79839667295524,-122.27920532226564],\"mapZoom\":9},\"gridData\":{\"h\":20,\"i\":\"4\",\"w\":16,\"x\":16,\"y\":40},\"id\":\"9e1663a0-d402-11e7-8269-95ce1876e83b\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"gridData\":{\"h\":10,\"i\":\"5\",\"w\":16,\"x\":0,\"y\":40},\"id\":\"ec1d5e60-d3f7-11e7-8269-95ce1876e83b\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"gridData\":{\"h\":10,\"i\":\"6\",\"w\":16,\"x\":0,\"y\":50},\"id\":\"fd965480-d3f7-11e7-8269-95ce1876e83b\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{\"mapCenter\":[47.73562905149295,-121.56509399414064],\"mapZoom\":9},\"gridData\":{\"h\":30,\"i\":\"7\",\"w\":32,\"x\":16,\"y\":10},\"id\":\"3320ecd0-d3fa-11e7-8269-95ce1876e83b\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"gridData\":{\"h\":10,\"i\":\"8\",\"w\":16,\"x\":0,\"y\":20},\"id\":\"13496750-d3f7-11e7-8269-95ce1876e83b\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"gridData\":{\"h\":10,\"i\":\"9\",\"w\":16,\"x\":0,\"y\":10},\"id\":\"5c43a690-d402-11e7-8269-95ce1876e83b\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"gridData\":{\"h\":10,\"i\":\"10\",\"w\":16,\"x\":0,\"y\":0},\"id\":\"6ffbc1d0-d403-11e7-8269-95ce1876e83b\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{\"mapCenter\":[47.100044694025215,-119.31152343750001],\"mapZoom\":6},\"gridData\":{\"h\":20,\"i\":\"11\",\"w\":16,\"x\":32,\"y\":40},\"id\":\"0222f8d0-d409-11e7-8269-95ce1876e83b\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}},\"gridData\":{\"h\":10,\"i\":\"12\",\"w\":16,\"x\":32,\"y\":0},\"id\":\"899312b0-d40d-11e7-8269-95ce1876e83b\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"version\":\"6.5.4\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
       "version": 1,
-      "attributes": {
-        "title": "Flight Track - Gauge Num Airlines",
-        "visState": "{\"title\":\"Flight Track - Gauge Num Airlines\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"gauge\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"cardinality\",\"field\":\"airline\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"airline\",\"terms_order_by\":null,\"label\":\"Airlines\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"flight-track-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"show_grid\":1,\"gauge_color_rules\":[{\"id\":\"9efc6260-d3f8-11e7-8e55-dfd29ce352f3\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"bar_color_rules\":[{\"id\":\"28a21dc0-d3f9-11e7-8e55-dfd29ce352f3\"}],\"background_color_rules\":[{\"id\":\"2b014370-d3f9-11e7-8e55-dfd29ce352f3\"}]},\"aggs\":[]}",
-        "uiStateJSON": "{}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{}"
-        }
-      }
-    },
-    {
-      "id": "38e09810-d3f9-11e7-8269-95ce1876e83b",
-      "type": "visualization",
-      "version": 1,
-      "attributes": {
-        "title": "Flight Track - Gauge Num Airplanes",
-        "visState": "{\"title\":\"Flight Track - Gauge Num Airplanes\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"gauge\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"cardinality\",\"field\":\"flight\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"airline\",\"terms_order_by\":null,\"label\":\"Airplanes\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"flight-track-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"show_grid\":1,\"gauge_color_rules\":[{\"id\":\"9efc6260-d3f8-11e7-8e55-dfd29ce352f3\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"bar_color_rules\":[{\"id\":\"28a21dc0-d3f9-11e7-8e55-dfd29ce352f3\"}],\"background_color_rules\":[{\"id\":\"2b014370-d3f9-11e7-8e55-dfd29ce352f3\"}]},\"aggs\":[]}",
-        "uiStateJSON": "{}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{}"
-        }
-      }
-    },
-    {
-      "id": "9e1663a0-d402-11e7-8269-95ce1876e83b",
-      "type": "visualization",
-      "version": 1,
-      "attributes": {
-        "title": "Flight Track - Heatmap Unique Flights",
-        "visState": "{\"title\":\"Flight Track - Heatmap Unique Flights\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Heatmap\",\"isDesaturated\":false,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"flight\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"precision\":5}}]}",
-        "uiStateJSON": "{\"mapZoom\":9,\"mapCenter\":[35.73425097869431,139.7721862792969]}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-        }
-      }
-    },
-    {
-      "id": "ec1d5e60-d3f7-11e7-8269-95ce1876e83b",
-      "type": "visualization",
-      "version": 4,
-      "attributes": {
-        "title": "Flight Track - Line Altitudes w Speeds",
-        "visState": "{\"title\":\"Flight Track - Line Altitudes w Speeds\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Average altitude\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Average altitude\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false,\"radiusRatio\":23},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"altitude\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"flight\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
-        "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-        }
-      }
-    },
-    {
-      "id": "fd965480-d3f7-11e7-8269-95ce1876e83b",
-      "type": "visualization",
-      "version": 2,
-      "attributes": {
-        "title": "Flight Track - Line Speeds",
-        "visState": "{\"title\":\"Flight Track - Line Speeds\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Average speed\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Average speed\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":false}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"speed\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"flight\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
-        "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-        }
-      }
-    },
-    {
-      "id": "3320ecd0-d3fa-11e7-8269-95ce1876e83b",
-      "type": "visualization",
-      "version": 1,
-      "attributes": {
-        "title": "Flight Track - Map Location",
-        "visState": "{\"title\":\"Flight Track - Map Location\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Shaded Circle Markers\",\"isDesaturated\":false,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"@timestamp\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"precision\":5}}]}",
-        "uiStateJSON": "{\"mapZoom\":9,\"mapCenter\":[35.698571062054015,139.58953857421878]}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-        }
-      }
-    },
-    {
-      "id": "13496750-d3f7-11e7-8269-95ce1876e83b",
-      "type": "visualization",
-      "version": 1,
-      "attributes": {
-        "title": "Flight Track - Pie Airlines",
-        "visState": "{\"title\":\"Flight Track - Pie Airlines\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"airline\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
-        "uiStateJSON": "{}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-        }
-      }
-    },
-    {
-      "id": "5c43a690-d402-11e7-8269-95ce1876e83b",
-      "type": "visualization",
-      "version": 1,
-      "attributes": {
-        "title": "Flight Track - Tag Airlines",
-        "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"exclude\":\"\\\"???\\\"\",\"field\":\"airline\",\"order\":\"desc\",\"orderAgg\":{\"enabled\":true,\"id\":\"2-orderAgg\",\"params\":{\"field\":\"flight\"},\"schema\":{\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!median\",\"!std_dev\",\"!derivative\",\"!moving_avg\",\"!serial_diff\",\"!cumulative_sum\",\"!avg_bucket\",\"!max_bucket\",\"!min_bucket\",\"!sum_bucket\"],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"hideCustomLabel\":true,\"max\":null,\"min\":0,\"name\":\"orderAgg\",\"params\":[],\"title\":\"Order Agg\"},\"type\":\"cardinality\"},\"orderBy\":\"custom\",\"size\":20},\"schema\":\"segment\",\"type\":\"terms\"}],\"params\":{\"maxFontSize\":72,\"minFontSize\":18,\"orientation\":\"multiple\",\"scale\":\"linear\"},\"title\":\"Flight Track - Tag Airlines\",\"type\":\"tagcloud\"}",
-        "uiStateJSON": "{}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-        }
-      }
-    },
-    {
-      "id": "6ffbc1d0-d403-11e7-8269-95ce1876e83b",
-      "type": "visualization",
-      "version": 1,
-      "attributes": {
-        "title": "Flight Track - Title",
-        "visState": "{\"title\":\"Flight Track - Title\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"markdown\":\"# ✈️ Realtime Flight Track\\nThe data gathered from [Automatic Dependent Surveillance Broadcast (ADS-B)](https://www.faa.gov/nextgen/programs/adsb/) signals by a home made raspberry pi receiver.\"},\"aggs\":[]}",
-        "uiStateJSON": "{}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{}"
-        }
-      }
-    },
-    {
-      "id": "0222f8d0-d409-11e7-8269-95ce1876e83b",
-      "type": "visualization",
-      "version": 1,
-      "attributes": {
-        "title": "Flight Track - Heatmap Altitudes",
-        "visState": "{\"title\":\"Flight Track - Heatmap Altitudes\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Shaded Geohash Grid\",\"isDesaturated\":false,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"altitude\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"precision\":5}}]}",
-        "uiStateJSON": "{\"mapZoom\":9,\"mapCenter\":[35.73425097869431,139.7721862792969]}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-        }
-      }
-    },
-    {
-      "id": "899312b0-d40d-11e7-8269-95ce1876e83b",
-      "type": "visualization",
-      "version": 1,
-      "attributes": {
-        "title": "Flight Track - Metric Signals",
-        "visState": "{\"title\":\"Flight Track - Metric Signals\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"gauge\",\"gauge\":{\"verticalSplit\":false,\"autoExtend\":false,\"percentageMode\":false,\"gaugeType\":\"Metric\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"None\",\"useRange\":false,\"colorsRange\":[{\"from\":0,\"to\":100}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":false,\"labels\":false,\"color\":\"#333\",\"width\":2},\"type\":\"simple\",\"style\":{\"fontSize\":60,\"bgColor\":false,\"labelColor\":false,\"subText\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}]}",
-        "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}}",
-        "description": "",
-        "version": 1,
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
-        }
-      }
-    },
-    {
-      "id": "e418de20-d3f6-11e7-8269-95ce1876e83b",
-      "type": "index-pattern",
-      "version": 2,
-      "attributes": {
-        "title": "flight-track-*",
-        "timeFieldName": "@timestamp",
-        "fields": "[{\"name\":\"@timestamp\",\"type\":\"date\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"@version\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"@version.keyword\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"_id\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"airline\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"altitude\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"flight\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"hex\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"location\",\"type\":\"geo_point\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"messages\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"seen\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"speed\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"squawk\",\"type\":\"string\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"track\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"validposition\",\"type\":\"boolean\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"validtrack\",\"type\":\"boolean\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"vert_rate\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]"
-      }
-    },
-    {
-      "id": "7abe9ec0-d404-11e7-8269-95ce1876e83b",
-      "type": "dashboard",
-      "version": 5,
-      "attributes": {
-        "title": "Flight Track - Dashboard",
-        "hits": 0,
-        "description": "",
-        "panelsJSON": "[{\"col\":1,\"id\":\"9f5af290-d3f7-11e7-8269-95ce1876e83b\",\"panelIndex\":1,\"row\":7,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"46ad9d30-d3f9-11e7-8269-95ce1876e83b\",\"panelIndex\":2,\"row\":1,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"38e09810-d3f9-11e7-8269-95ce1876e83b\",\"panelIndex\":3,\"row\":1,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"9e1663a0-d402-11e7-8269-95ce1876e83b\",\"panelIndex\":4,\"row\":9,\"size_x\":4,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"ec1d5e60-d3f7-11e7-8269-95ce1876e83b\",\"panelIndex\":5,\"row\":9,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"fd965480-d3f7-11e7-8269-95ce1876e83b\",\"panelIndex\":6,\"row\":11,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"3320ecd0-d3fa-11e7-8269-95ce1876e83b\",\"panelIndex\":7,\"row\":3,\"size_x\":8,\"size_y\":6,\"type\":\"visualization\"},{\"col\":1,\"id\":\"13496750-d3f7-11e7-8269-95ce1876e83b\",\"panelIndex\":8,\"row\":5,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"5c43a690-d402-11e7-8269-95ce1876e83b\",\"panelIndex\":9,\"row\":3,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"6ffbc1d0-d403-11e7-8269-95ce1876e83b\",\"panelIndex\":10,\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":9,\"id\":\"0222f8d0-d409-11e7-8269-95ce1876e83b\",\"panelIndex\":11,\"row\":9,\"size_x\":4,\"size_y\":4,\"type\":\"visualization\"},{\"size_x\":4,\"size_y\":2,\"panelIndex\":12,\"type\":\"visualization\",\"id\":\"899312b0-d40d-11e7-8269-95ce1876e83b\",\"col\":9,\"row\":1}]",
-        "optionsJSON": "{\"darkTheme\":false}",
-        "uiStateJSON": "{\"P-7\":{\"mapCenter\":[35.69299463209881,139.60052490234378]},\"P-12\":{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}}}",
-        "version": 1,
-        "timeRestore": true,
-        "timeTo": "now",
-        "timeFrom": "now-15m",
-        "refreshInterval": {
-          "display": "Off",
-          "pause": false,
-          "value": 0
-        },
-        "kibanaSavedObjectMeta": {
-          "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"key\":\"validposition\",\"negate\":false,\"params\":{\"query\":true,\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"true\"},\"query\":{\"match\":{\"validposition\":{\"query\":true,\"type\":\"phrase\"}}}}],\"highlightAll\":true,\"version\":true}"
-        }
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-30m",
+      "refreshInterval": {
+        "pause": false,
+        "value": 5000
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
       }
     }
-]}
+  },
+  {
+    "_id": "9f5af290-d3f7-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Bar Unique Airplanes",
+      "visState": "{\"title\":\"Flight Track - Bar Unique Airplanes\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Unique count of flight\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Unique count of flight\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"flight\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"airline\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "46ad9d30-d3f9-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Gauge Num Airlines",
+      "visState": "{\"title\":\"Flight Track - Gauge Num Airlines\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"gauge\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"cardinality\",\"field\":\"airline\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"airline\",\"terms_order_by\":null,\"label\":\"Airlines\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"flight-track-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"show_grid\":1,\"gauge_color_rules\":[{\"id\":\"9efc6260-d3f8-11e7-8e55-dfd29ce352f3\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"bar_color_rules\":[{\"id\":\"28a21dc0-d3f9-11e7-8e55-dfd29ce352f3\"}],\"background_color_rules\":[{\"id\":\"2b014370-d3f9-11e7-8e55-dfd29ce352f3\"}]},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "38e09810-d3f9-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Gauge Num Airplanes",
+      "visState": "{\"title\":\"Flight Track - Gauge Num Airplanes\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"gauge\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"cardinality\",\"field\":\"flight\"}],\"seperate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"terms_field\":\"airline\",\"terms_order_by\":null,\"label\":\"Airplanes\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"flight-track-*\",\"interval\":\"auto\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"show_legend\":1,\"show_grid\":1,\"gauge_color_rules\":[{\"id\":\"9efc6260-d3f8-11e7-8e55-dfd29ce352f3\"}],\"gauge_width\":10,\"gauge_inner_width\":10,\"gauge_style\":\"half\",\"bar_color_rules\":[{\"id\":\"28a21dc0-d3f9-11e7-8e55-dfd29ce352f3\"}],\"background_color_rules\":[{\"id\":\"2b014370-d3f9-11e7-8e55-dfd29ce352f3\"}]},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "9e1663a0-d402-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Heatmap Unique Flights",
+      "visState": "{\"title\":\"Flight Track - Heatmap Unique Flights\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Heatmap\",\"isDesaturated\":false,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"flight\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"precision\":5}}]}",
+      "uiStateJSON": "{\"mapZoom\":9,\"mapCenter\":[35.73425097869431,139.7721862792969]}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "3320ecd0-d3fa-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Map Location",
+      "visState": "{\"title\":\"Flight Track - Map Location\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Shaded Circle Markers\",\"isDesaturated\":false,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"@timestamp\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"precision\":5}}]}",
+      "uiStateJSON": "{\"mapZoom\":9,\"mapCenter\":[35.698571062054015,139.58953857421878]}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "13496750-d3f7-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Pie Airlines",
+      "visState": "{\"title\":\"Flight Track - Pie Airlines\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"airline\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "5c43a690-d402-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Tag Airlines",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"exclude\":\"\\\"???\\\"\",\"field\":\"airline\",\"order\":\"desc\",\"orderAgg\":{\"enabled\":true,\"id\":\"2-orderAgg\",\"params\":{\"field\":\"flight\"},\"schema\":{\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!median\",\"!std_dev\",\"!derivative\",\"!moving_avg\",\"!serial_diff\",\"!cumulative_sum\",\"!avg_bucket\",\"!max_bucket\",\"!min_bucket\",\"!sum_bucket\"],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"hideCustomLabel\":true,\"max\":null,\"min\":0,\"name\":\"orderAgg\",\"params\":[],\"title\":\"Order Agg\"},\"type\":\"cardinality\"},\"orderBy\":\"custom\",\"size\":20},\"schema\":\"segment\",\"type\":\"terms\"}],\"params\":{\"maxFontSize\":72,\"minFontSize\":18,\"orientation\":\"multiple\",\"scale\":\"linear\"},\"title\":\"Flight Track - Tag Airlines\",\"type\":\"tagcloud\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "6ffbc1d0-d403-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Title",
+      "visState": "{\"title\":\"Flight Track - Title\",\"type\":\"markdown\",\"params\":{\"fontSize\":12,\"markdown\":\"# ✈️ Realtime Flight Track\\nThe data gathered from [Automatic Dependent Surveillance Broadcast (ADS-B)](https://www.faa.gov/nextgen/programs/adsb/) signals by a home made raspberry pi receiver.\"},\"aggs\":[]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{}"
+      }
+    }
+  },
+  {
+    "_id": "0222f8d0-d409-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Heatmap Altitudes",
+      "visState": "{\"title\":\"Flight Track - Heatmap Altitudes\",\"type\":\"tile_map\",\"params\":{\"mapType\":\"Shaded Geohash Grid\",\"isDesaturated\":false,\"addTooltip\":true,\"heatClusterSize\":1.5,\"legendPosition\":\"bottomright\",\"mapZoom\":2,\"mapCenter\":[0,0],\"wms\":{\"enabled\":false,\"options\":{\"format\":\"image/png\",\"transparent\":true}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"altitude\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"location\",\"autoPrecision\":true,\"isFilteredByCollar\":true,\"useGeocentroid\":true,\"precision\":5}}]}",
+      "uiStateJSON": "{\"mapZoom\":9,\"mapCenter\":[35.73425097869431,139.7721862792969]}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "899312b0-d40d-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Metric Signals",
+      "visState": "{\"title\":\"Flight Track - Metric Signals\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"gauge\",\"gauge\":{\"verticalSplit\":false,\"autoExtend\":false,\"percentageMode\":false,\"gaugeType\":\"Metric\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"None\",\"useRange\":false,\"colorsRange\":[{\"from\":0,\"to\":100}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":false,\"labels\":false,\"color\":\"#333\",\"width\":2},\"type\":\"simple\",\"style\":{\"fontSize\":60,\"bgColor\":false,\"labelColor\":false,\"subText\":\"\"}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 100\":\"rgb(0,104,55)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "fd965480-d3f7-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Line Speeds",
+      "visState": "{\"title\":\"Flight Track - Line Speeds\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Average gs\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Average gs\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":false}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"gs\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"timeRange\":{\"from\":\"now-15m\",\"to\":\"now\",\"mode\":\"quick\"},\"useNormalizedEsInterval\":true,\"interval\":\"auto\",\"time_zone\":\"America/Los_Angeles\",\"drop_partials\":false,\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"flight\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "ec1d5e60-d3f7-11e7-8269-95ce1876e83b",
+    "_type": "visualization",
+    "_source": {
+      "title": "Flight Track - Line Altitudes w Speeds",
+      "visState": "{\"title\":\"Flight Track - Line Altitudes w Speeds\",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Average alt_geom\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"Average alt_geom\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false,\"radiusRatio\":23},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"alt_geom\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"timeRange\":{\"from\":\"now-15m\",\"to\":\"now\",\"mode\":\"quick\"},\"useNormalizedEsInterval\":true,\"interval\":\"auto\",\"time_zone\":\"America/Los_Angeles\",\"drop_partials\":false,\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"flight\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"e418de20-d3f6-11e7-8269-95ce1876e83b\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  }
+]
