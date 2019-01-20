@@ -8,21 +8,19 @@ This is a total hack to get dump1090-fa working. YMMV
 
 ### ADS-B Receiver and Dump1090-fa Software
 
-You must have set up your own [ADS-B](https://www.faa.gov/nextgen/programs/adsb/) receiver and are receiving the signal by using [dump1090](https://github.com/antirez/dump1090). The installation instructions can be found [here](https://www.flightradar24.com/build-your-own).
+You must have set up your own [ADS-B](https://www.faa.gov/nextgen/programs/adsb/) receiver and are receiving the signal by using [dump1090-fa] (https://github.com/adsbxchange/dump1090-fa). The installation instructions can be found on that github page.
 
-You must also have jq installed.  apt install jq, yum install jq, etc... 
-
-This is required due to the hackyness of this fix.
+You must also have jq installed.  apt install jq, yum install jq, etc... This is required due to the hackyness of this fix.
 
 ### Elastic Stack
 
-You must install Elasticsearch and Kibana version 6.0.0 or abover properly. Using [Elastic Cloud](http://cloud.elastic.co) could be a good alternative choise. Logstash 6.0.0 or higher will be used to fetch the airplace location periodically from the dump1090-faand to ingest the data to Elasticsearch. 
+You must install Elasticsearch and Kibana version 6.0.0 or abover properly. Using [Elastic Cloud](http://cloud.elastic.co) could be a good alternative choise. Logstash 6.0.0 or higher will be used to fetch the airplace location periodically from the dump1090-fa and to ingest the data to Elasticsearch. 
 
 ## Setup and Run
 
 ### Adjust Logstash Configuration File
 
-1. Open `flight-track-logstash.conf` by a text editor and set the URL of the dump1090-faweb service under the `http_poller` of the input plugin configuration.
+1. Open `flight-track-logstash.conf` by a text editor and set the URL of the dump1090-fa web service under the `exec` of the input plugin configuration.
 2. Go to the output plugin configuration and make sure the hosts setting of elasticsearch output is properly set.
 
 ### Run
